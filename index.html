@@ -188,8 +188,8 @@
     opacity: 0.12;
   }
   .hero-bg-gear2 {
-    position: absolute; right: 270px; bottom: 40px;
-    width: 220px; height: 220px;
+    position: absolute; right: 310px; bottom: 60px;
+    width: 180px; height: 180px;
     opacity: 0.08;
   }
   .hero-eyebrow {
@@ -1168,10 +1168,10 @@
       ctx.arc(cx, cy, innerR, a3, a + toothW - toothW * 0.18, false);
     }
     ctx.closePath();
-    ctx.fillStyle   = fillColor;
+    ctx.fillStyle = 'rgba(37,99,235,0.06)';
     ctx.fill();
-    ctx.strokeStyle = strokeColor;
-    ctx.lineWidth   = 1.2;
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1.5;
     ctx.stroke();
 
     // Center hole
