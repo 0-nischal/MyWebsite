@@ -186,12 +186,12 @@
     position: absolute; right: -60px; top: 50%;
     transform: translateY(-50%);
     width: 600px; height: 600px;
-    opacity: 0.04;
+    opacity: 0.12;
   }
   .hero-bg-gear2 {
-    position: absolute; right: 300px; top: 30%;
-    width: 300px; height: 300px;
-    opacity: 0.03;
+    position: absolute; right: 520px; top: 15%;
+    width: 200px; height: 200px;
+    opacity: 0.08;
   }
   .hero-eyebrow {
     font-family: 'Share Tech Mono', monospace;
@@ -2068,8 +2068,56 @@ function drawBgGear(canvasId, teeth, color) {
   ctx.stroke();
 }
 
-drawBgGear('bgGear1', 16, 'rgba(59,130,246,1)');
-drawBgGear('bgGear2', 11, 'rgba(59,130,246,1)');
+function animateBgGear(canvasId, teeth, color, speed) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let angle = 0;
+
+  function drawFrame() {
+    const W = canvas.offsetWidth;
+    const H = canvas.offsetHeight;
+    canvas.width = W;
+    canvas.height = H;
+    const cx = W / 2, cy = H / 2;
+    const r = W * 0.42;
+    const toothH = W * 0.07;
+    const innerR = r - toothH;
+    const toothW = (2 * Math.PI) / teeth;
+
+    ctx.beginPath();
+    for (let i = 0; i < teeth; i++) {
+      const a = angle + i * toothW;
+      const a0 = a - toothW * 0.18;
+      ctx.lineTo(cx + innerR * Math.cos(a0), cy + innerR * Math.sin(a0));
+      const a1 = a - toothW * 0.16;
+      ctx.lineTo(cx + r * Math.cos(a1), cy + r * Math.sin(a1));
+      const a2 = a + toothW * 0.16;
+      ctx.lineTo(cx + r * Math.cos(a2), cy + r * Math.sin(a2));
+      const a3 = a + toothW * 0.18;
+      ctx.lineTo(cx + innerR * Math.cos(a3), cy + innerR * Math.sin(a3));
+      ctx.arc(cx, cy, innerR, a3, a + toothW - toothW * 0.18, false);
+    }
+    ctx.closePath();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(cx, cy, r * 0.18, 0, Math.PI * 2);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    angle += speed;
+    requestAnimationFrame(drawFrame);
+  }
+
+  drawFrame();
+}
+
+animateBgGear('bgGear1', 16, 'rgba(59,130,246,1)', 0.003);
+animateBgGear('bgGear2', 11, 'rgba(59,130,246,1)', -0.005);
 </script>
 </body>
 </html>
