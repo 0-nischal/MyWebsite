@@ -1169,7 +1169,7 @@
       ctx.arc(cx, cy, innerR, a3, a + toothW - toothW * 0.18, false);
     }
     ctx.closePath();
-    ctx.strokeStyle = color;
+    ctx.strokeStyle = strokecolor;
     ctx.lineWidth = 1.5;
     ctx.stroke();
 
@@ -2114,6 +2114,9 @@ function animateBgGear(canvasId, teeth, color, speed) {
   drawFrame();
 }
 
+drawBgGear('bgGear1', 16, 'rgba(59,130,246,1)');
+drawBgGear('bgGear2', 11, 'rgba(59,130,246,1)');
+  
 animateBgGear('bgGear1', 16, 'rgba(59,130,246,1)', 0.003);
 animateBgGear('bgGear2', 11, 'rgba(59,130,246,1)', -0.005);
 </script>
