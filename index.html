@@ -183,14 +183,13 @@
     overflow: hidden;
   }
   .hero-bg-gear {
-    position: absolute; right: -60px; top: 50%;
-    transform: translateY(-50%);
-    width: 600px; height: 600px;
+    position: absolute; right: -40px; bottom: 0px;
+    width: 380px; height: 380px;
     opacity: 0.12;
   }
   .hero-bg-gear2 {
-    position: absolute; right: 520px; top: 15%;
-    width: 200px; height: 200px;
+    position: absolute; right: 290px; bottom: 70px;
+    width: 180px; height: 180px;
     opacity: 0.08;
   }
   .hero-eyebrow {
@@ -2097,6 +2096,8 @@ function animateBgGear(canvasId, teeth, color, speed) {
       ctx.arc(cx, cy, innerR, a3, a + toothW - toothW * 0.18, false);
     }
     ctx.closePath();
+    ctx.fillStyle = 'rgba(37,99,250,0.06)';
+    ctx.fill();
     ctx.strokeStyle = color;
     ctx.lineWidth = 1.5;
     ctx.stroke();
