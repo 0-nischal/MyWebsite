@@ -1289,9 +1289,9 @@
 
   <div class="hero-eyebrow">// Mechanical & Electrical Engineer</div>
   <h1 class="hero-name">Nischal<br><span class="last">Karki</span></h1>
-  <p class="hero-title">MECHANICAL DESIGN · Advanced Manufacturing · EMBEDDED SYSTEMS</p>
+  <p class="hero-title">MECHANICAL DESIGN · EMBEDDED SYSTEMS · ADVANCED MANUFACTURING</p>
   <p class="hero-desc">B.S. in Mechanical Engineering & Electrical Engineering <br> Bridging mechanics and electronics to create robust, intelligent systems.</p>
-  <p class="hero-seeking">// Seeking Summer 2026 Internship Positions</p>
+  <p class="hero-seeking">// Open to Robotics & Mechatronics Engineering Internship roles</p>
   <div class="hero-actions">
     <a href="#projects" class="btn-primary">VIEW PROJECTS</a>
     <a href="#contact" class="btn-outline">GET IN TOUCH</a>
@@ -1375,20 +1375,34 @@
   </div>
   <div class="projects-grid">
     <div class="project-card">
-  <div class="project-img-wrap">
-    <img src="images/ur10e.png" alt="UR10e Machine Tending">
-  </div>
-  <div class="project-info">
-    <div class="project-title">Automated CNC Machine Tending</div>
-    <div class="project-tech">
-      <span class="tech-tag">Cobot Programming</span> 
-      <span class="tech-tag">Robot2CNC</span>
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">FMEA</span>
+      <div class="project-img-wrap">
+        <img src="images/MARS_01.png" alt="MARS Robot">
+      </div>
+      <div class="project-info">
+        <div class="project-title">Multi-terrain Autonomous Robot Spider (MARS)</div>
+        <div class="project-tech">
+          <span class="tech-tag">ROS</span>
+          <span class="tech-tag">Inverse Kinematics</span>
+          <span class="tech-tag">Embedded Systems</span>
+        </div>
+        <button class="detail-btn" onclick="openDetail('proj-001')">VIEW DETAILS ▸</button>
+      </div>
+    </div> 
+    <div class="project-card">
+      <div class="project-img-wrap">
+        <img src="images/ur10e.png" alt="UR10e Machine Tending">
+      </div>
+      <div class="project-info">
+        <div class="project-title">Automated CNC Machine Tending</div>
+        <div class="project-tech">
+          <span class="tech-tag">Cobot Programming</span> 
+          <span class="tech-tag">Robot2CNC</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">FMEA</span>
+        </div>
+        <button class="detail-btn" onclick="openDetail('proj-002')">VIEW DETAILS ▸</button>
+      </div>
     </div>
-    <button class="detail-btn" onclick="openDetail('proj-001')">VIEW DETAILS ▸</button>
-  </div>
-</div>
     <div class="project-card">
       <div class="project-img-wrap">
         <img src="images/stp_05.jpg" alt="Step Stacker">
@@ -1396,7 +1410,7 @@
       <div class="project-info">
         <div class="project-title">Step Stacker</div>
         <div class="project-tech"><span class="tech-tag">SolidWorks</span><span class="tech-tag">MicroPython</span></div>
-        <button class="detail-btn" onclick="openDetail('proj-002')">VIEW DETAILS ▸</button>
+        <button class="detail-btn" onclick="openDetail('proj-003')">VIEW DETAILS ▸</button>
       </div>
     </div>
     <div class="project-card">
@@ -1406,7 +1420,7 @@
       <div class="project-info">
         <div class="project-title">PID controlled Propeller System</div>
         <div class="project-tech"><span class="tech-tag">MicroPython</span><span class="tech-tag">PID Control</span><span class="tech-tag">Electronics</span></div>
-        <button class="detail-btn" onclick="openDetail('proj-003')">VIEW DETAILS ▸</button>
+        <button class="detail-btn" onclick="openDetail('proj-004')">VIEW DETAILS ▸</button>
       </div>
     </div>
     <div class="project-card">
@@ -1416,7 +1430,7 @@
       <div class="project-info">
         <div class="project-title">Custom Compression Platens for UTM applications</div>
         <div class="project-tech"><span class="tech-tag">CNC Milling</span><span class="tech-tag">SolidWorks</span><span class="tech-tag">Engineering Drafting</span></div>
-        <button class="detail-btn" onclick="openDetail('proj-004')">VIEW DETAILS ▸</button>
+        <button class="detail-btn" onclick="openDetail('proj-005')">VIEW DETAILS ▸</button>
       </div>
     </div>
     <div class="project-card">
@@ -1426,7 +1440,7 @@
       <div class="project-info">
         <div class="project-title">Miscellaneous Tools & Test Equipment</div>
         <div class="project-tech"><span class="tech-tag">3D Printing</span><span class="tech-tag">Machining</span><span class="tech-tag">Arduino</span><span class="tech-tag">KiCad</span><span class="tech-tag">STM32</span></div>
-        <button class="detail-btn" onclick="openDetail('proj-005')">VIEW DETAILS ▸</button>
+        <button class="detail-btn" onclick="openDetail('proj-006')">VIEW DETAILS ▸</button>
       </div>
     </div>
   </div>
@@ -1823,18 +1837,35 @@ const DETAILS = {
   /* ── PROJECTS ────────────────────────────────────────── */
   'proj-001': {
     tag: 'PROJECT — 001',
+    title: 'Multi-terrain Autonomous Robot Spider (MARS)',
+    role: 'Personal Learning Project · Robot Design',
+    date: '2025 – PRESENT',
+    body: `
+      <p>A personal robotics project to design and build a multi-terrain autonomous hexapod robot capable of navigating complex surfaces using coordinated leg motion and onboard sensing.</p>
+    <h4>Technical Details</h4>
+    <p style="font-family:'Share Tech Mono',monospace; font-size:12px; letter-spacing:2px; color:#BA8E23; border:1px solid rgba(139,128,0,1.0); padding:10px 14px; display:inline-block;"><b>⚙ WORK IN PROGRESS</b></p>
+    `,
+    tech: ['ROS', 'Inverse Kinematics', 'Embedded Systems', 'Mechanical Design'],
+    images: [
+      
+    ]
+  },
+
+  'proj-002': {
+    tag: 'PROJECT — 002',
     title: 'Automatic CNC Machine Tending with UR10e',
     role: 'Personal Learning Project · Industrial Robotics',
     date: '2025 – PRESENT',
     body: `
       <p>Hands-on industrial robotics project to automate CNC machine tending process using a UR10e collaborative robot.</p>
       <h4>Technical Details</h4>
-      <ul>
-        <li>Programmed the UR10e collaborative robot to perform automated loading and unloading of parts to the CNC machine.</li>
-        <li>Utilized Robot2CNC integration framework for communication with the CNC machine.</li>
-        <li>Applied FMEA principles to identify failure modes and optimized cycle efficiency using proper motion planning and part fixturing strategies.</li>
-      </ul>
+      <p style="font-family:'Share Tech Mono',monospace; font-size:12px; letter-spacing:2px; color:#BA8E23; border:1px solid rgba(139,128,0,1.0); padding:10px 14px; display:inline-block;"><b>⚙ WORK IN PROGRESS</b></p>
     `,
+    // <ul>
+      //   <li>Programmed the UR10e collaborative robot to perform automated loading and unloading of parts to the CNC machine.</li>
+      //   <li>Utilized Robot2CNC integration framework for communication with the CNC machine.</li>
+      //   <li>Applied FMEA principles to identify failure modes and optimized cycle efficiency using proper motion planning and part fixturing strategies.</li>
+      // </ul>
     tech: ['UR10e', 'Robot2CNC', 'Automation', 'I/O Signals', 'Pneumatics', 'FMEA'],
     images: [
       { src: 'images/ur10e_01.jpg', caption: 'Pallets and Rail system setup' },
@@ -1843,8 +1874,8 @@ const DETAILS = {
     ]
   },
 
-  'proj-002': { 
-    tag: 'PROJECT — 002',
+  'proj-003': { 
+    tag: 'PROJECT — 003',
     title: 'Step Stacker - Precise Vertical Platform Lift system',
     role: 'IDEELab · Mississippi State University',
     date: 'October 2025',
@@ -1868,8 +1899,8 @@ const DETAILS = {
     ]
   },
 
-  'proj-003': { 
-    tag: 'PROJECT — 003',
+  'proj-004': { 
+    tag: 'PROJECT — 004',
     title: 'PID Controlled Propeller System',
     role: 'IDEELab · Mississippi State University',
     date: 'December 2025',
@@ -1888,8 +1919,8 @@ const DETAILS = {
     ]
   },
 
-  'proj-004': {
-    tag: 'PROJECT — 004',
+  'proj-005': {
+    tag: 'PROJECT — 005',
     title: 'Custom Compression Platens for UTM applications',
     role: 'IDEELab · Mississippi State University',
     date: 'Jan 2026',
@@ -1910,8 +1941,8 @@ const DETAILS = {
     ]
   },
 
-  'proj-005': {
-    tag: 'PROJECT — 005',
+  'proj-006': {
+    tag: 'PROJECT — 006',
     title: 'Miscellaneous Tools & Test Equipment',
     role: 'Personal & Work Projects',
     date: '2023 – PRESENT',
@@ -1928,6 +1959,7 @@ const DETAILS = {
       { src: 'images/misc_02.jpg', caption: 'Test equipment #1' },
       { src: 'images/misc_03.jpg', caption: 'Test equipment #2' },
       { src: 'images/misc_04.jpg', caption: 'Test equipment #3' },
+      { src: 'images/webcam.png', caption: 'DIY USB webcam' },
     ]
   },
 
@@ -1961,7 +1993,7 @@ document.querySelectorAll('a, button, .skill-card, .project-card, .tag').forEach
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.getElementById('loader').classList.add('hidden');
-  }, 1500);
+  }, 1300);
 });
 
 // SCROLL REVEAL
